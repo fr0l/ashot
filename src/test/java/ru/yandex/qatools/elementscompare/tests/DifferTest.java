@@ -45,6 +45,7 @@ public class DifferTest {
     public static Collection<Object[]> data() {
         return asList(new Object[][] {
                 {PointsMarkupPolicy.class},
+                {PackedPointsMarkupPolicy.class},
                 {ImageMarkupPolicy.class}
         });
     }
