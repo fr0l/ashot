@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class PackedPointsMarkupPolicy extends DiffMarkupPolicy {
 
     private int[] deposedPoints = null;
-    private int[] diffPoints = new int[10000];
+    private int[] diffPoints = new int[500_000];
     private int count = 0;
 
     private BufferedImage transparentMarkedImage = null;
@@ -42,7 +42,7 @@ public class PackedPointsMarkupPolicy extends DiffMarkupPolicy {
     @Override
     public void addDiffPoint(int x, int y) {
         if (diffPoints.length <= count) {
-            int[] newDiffPoints = new int[count + 10000];
+            int[] newDiffPoints = new int[count + 500_000];
             System.arraycopy(diffPoints, 0, newDiffPoints, 0, count);
             diffPoints = newDiffPoints;
         }
